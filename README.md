@@ -1,24 +1,28 @@
-@PyPy
+s = """Gur Mra bs Clguba, ol Gvz Crgref
 
-Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+Ornhgvshy vf orggre guna htyl.
+Rkcyvpvg vf orggre guna vzcyvpvg.
+Fvzcyr vf orggre guna pbzcyrk.
+Pbzcyrk vf orggre guna pbzcyvpngrq.
+Syng vf orggre guna arfgrq.
+Fcnefr vf orggre guna qrafr.
+Ernqnovyvgl pbhagf.
+Fcrpvny pnfrf nera'g fcrpvny rabhtu gb oernx gur ehyrf.
+Nygubhtu cenpgvpnyvgl orngf chevgl.
+Reebef fubhyq arire cnff fvyragyl.
+Hayrff rkcyvpvgyl fvyraprq.
+Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.
+Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.
+Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh'er Qhgpu.
+Abj vf orggre guna arire.
+Nygubhtu arire vf bsgra orggre guna *evtug* abj.
+Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg'f n onq vqrn.
+Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.
+Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg'f qb zber bs gubfr!"""
 
-Пример:
+d = {}
+for c in (65, 97):
+    for i in range(26):
+        d[chr(i+c)] = chr((i+13) % 26 + c)
 
-- 6 -> да
-- 7 -> да
-- 1 -> нет
-Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
-Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка (или на какой оси она находится).
-
-Пример:
-
-- x=34; y=-30 -> 4
-- x=2; y=4-> 1
-- x=-34; y=-30 -> 3
-Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
-Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
-
-Пример:
-
-- A (3,6); B (2,1) -> 5,09
-- A (7,-5); B (1,-1) -> 7,21
+print("".join([d.get(c, c) for c in s]))

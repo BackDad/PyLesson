@@ -8,3 +8,8 @@
 # 1 2 3 4 5
 # 3
 # -> 1
+import random
+ListA=[random.randint(0, 10) for i in range(int(input(
+    "Введите количество элементов N \n")))]
+print("\033[4m\033[32m\033[40m{}\033[0m".format(ListA))
+print("\033[4m\033[30m\033[43m{}\033[0m".format(ListA.count(int(input("Введите число X для проверки \n")))))
